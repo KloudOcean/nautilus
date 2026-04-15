@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/kloudocean/nautilus/discussions
+    about: Ask questions, share use cases, or propose ideas before an RFC
+  - name: Security issues
+    url: mailto:security@kloudocean.com
+    about: Report security vulnerabilities privately
