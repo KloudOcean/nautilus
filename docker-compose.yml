@@ -1,0 +1,33 @@
+services:
+  nautilus:
+    build: .
+    image: kloudocean/nautilus:0.1.0
+    ports:
+      - "8080:8080"
+    env_file: .env
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-nautilus}
+      POSTGRES_USER: ${POSTGRES_USER:-nautilus}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nautilus}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
+  redis_data:
