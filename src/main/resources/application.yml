@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: nautilus
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+
+nautilus:
+  # Provider keys are read from environment variables.
+  providers:
+    claude:
+      enabled: ${NAUTILUS_CLAUDE_ENABLED:false}
+      api-key: ${ANTHROPIC_API_KEY:}
+    openai:
+      enabled: ${NAUTILUS_OPENAI_ENABLED:false}
+      api-key: ${OPENAI_API_KEY:}
+
+logging:
+  level:
+    root: INFO
+    com.kloudocean.nautilus: DEBUG
