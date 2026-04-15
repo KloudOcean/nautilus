@@ -1,0 +1,36 @@
+# Local planning / AI context — NEVER commit
+.claude/
+CLAUDE.md
+SEED_ISSUES.md
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Build
+build/
+out/
+*.class
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Env and secrets
+.env
+.env.local
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker volumes (local dev)
+data/
