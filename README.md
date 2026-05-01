@@ -97,7 +97,7 @@ ChatResponse response = nautilus.chat()
     .send();
 ```
 
-Full docs in [docs/](docs/).
+Full docs in [docs/](docs/). For production, read the [log redaction guide](docs/guides/log-redaction.md) before going live.
 
 ## Architecture
 
