@@ -6,6 +6,7 @@
 
 **The Java-native AI Gateway. One API, every model.**
 
+[![Latest Release](https://img.shields.io/github/v/release/kloudocean/nautilus?style=flat-square&label=release&color=0A1628&include_prereleases&display_name=tag&sort=semver)](https://github.com/kloudocean/nautilus/releases)
 [![Java](https://img.shields.io/badge/Java-21-007396?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/license-Apache_2.0-blue?style=flat-square)](LICENSE)
