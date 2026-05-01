@@ -1,34 +1,57 @@
-## Summary
+#### What type of PR is this?
 
-<!-- What does this PR do? Why is it needed? -->
+Add one of the following kinds:
+* bug
+* fix
+* enhancement/feature
+* refactor
+* documentation
+* tests
+* build/ci
+* chore
 
-## Related issue
 
-Closes #
+#### What this PR does / why we need it:
 
-## Changes
 
-<!-- Bullet list of the main changes -->
 
--
--
 
-## Testing
+#### Which issue(s) this PR fixes:
 
-<!-- How did you verify this works? -->
+<!-- Automatically closes linked issue when PR is merged.
+Usage: `Fixes #<issue number>`, or `Fixes (paste link of issue)`. -->
 
-- [ ] Unit tests added or updated
-- [ ] Integration tests added or updated
-- [ ] Manually tested locally
+Fixes #
 
-## Checklist
 
-- [ ] Code compiles (`./mvnw compile`)
-- [ ] Tests pass (`./mvnw verify`)
-- [ ] Formatted (`./mvnw spotless:apply`)
-- [ ] Docs updated if user-facing
+#### Special notes for reviewers:
+
+
+
+
+#### Changelog input
+
+```
+release-note
+
+```
+
+
+#### Additional documentation
+
+This section can be blank.
+
+```
+docs
+
+```
+
+
+#### Checklist
+
+- [ ] Code compiles (`./gradlew compileJava`)
+- [ ] Tests pass (`./gradlew check`)
+- [ ] Formatted (`./gradlew spotlessApply`)
+- [ ] New features have tests
+- [ ] New user-facing features have docs updated
 - [ ] Commit messages follow conventional commits
-
-## Notes for reviewers
-
-<!-- Anything tricky, any trade-offs, any open questions -->
