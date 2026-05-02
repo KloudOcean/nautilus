@@ -13,16 +13,31 @@ management:
   endpoint:
     health:
       show-details: when-authorized
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
 
 nautilus:
-  # Provider keys are read from environment variables.
-  providers:
-    claude:
-      enabled: ${NAUTILUS_CLAUDE_ENABLED:false}
-      api-key: ${ANTHROPIC_API_KEY:}
-    openai:
-      enabled: ${NAUTILUS_OPENAI_ENABLED:false}
-      api-key: ${OPENAI_API_KEY:}
+  routing:
+    # Selects the active routing strategy. See docs/guides/routing-strategies.md.
+    # Built-in: priority
+    strategy: priority
+
+    # Provider entries in priority order (lower = higher priority).
+    # The mock provider is the only one shipping in v0.1; real providers
+    # (Claude, OpenAI, Llama, Mistral) plug in via the LlmProvider SPI.
+    providers:
+      - name: mock
+        priority: 1
+        enabled: true
+
+  provider:
+    mock:
+      enabled: true
 
 logging:
   level:
