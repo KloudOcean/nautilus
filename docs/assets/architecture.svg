@@ -91,20 +91,20 @@
       <text x="572" y="328" text-anchor="middle" class="label-sub">OTel · slf4j</text>
     </g>
 
-    <!-- Row 3: redaction + auth + audit pill row -->
+    <!-- Row 3: cross-cutting concerns (label above, pills below — no overlap) -->
     <g>
-      <rect x="60" y="360" width="560" height="50" class="module"/>
-      <text x="80" y="384" class="label-strong">Cross-cutting</text>
-      <rect x="170" y="372" width="92" height="22" class="pill" rx="11" ry="11"/>
-      <text x="216" y="388" text-anchor="middle" class="pill-text">Log Redaction</text>
-      <rect x="270" y="372" width="78" height="22" class="pill" rx="11" ry="11"/>
-      <text x="309" y="388" text-anchor="middle" class="pill-text">API Keys</text>
-      <rect x="356" y="372" width="74" height="22" class="pill" rx="11" ry="11"/>
-      <text x="393" y="388" text-anchor="middle" class="pill-text">Audit Log</text>
-      <rect x="438" y="372" width="78" height="22" class="pill" rx="11" ry="11"/>
-      <text x="477" y="388" text-anchor="middle" class="pill-text">Health</text>
-      <rect x="524" y="372" width="86" height="22" class="pill" rx="11" ry="11"/>
-      <text x="567" y="388" text-anchor="middle" class="pill-text">Validation</text>
+      <rect x="60" y="350" width="560" height="62" class="module"/>
+      <text x="340" y="368" text-anchor="middle" class="label-sub" font-style="italic">cross-cutting concerns</text>
+      <rect x="78" y="378" width="100" height="24" class="pill" rx="12" ry="12"/>
+      <text x="128" y="395" text-anchor="middle" class="pill-text">Log Redaction</text>
+      <rect x="190" y="378" width="86" height="24" class="pill" rx="12" ry="12"/>
+      <text x="233" y="395" text-anchor="middle" class="pill-text">API Keys</text>
+      <rect x="288" y="378" width="84" height="24" class="pill" rx="12" ry="12"/>
+      <text x="330" y="395" text-anchor="middle" class="pill-text">Audit Log</text>
+      <rect x="384" y="378" width="78" height="24" class="pill" rx="12" ry="12"/>
+      <text x="423" y="395" text-anchor="middle" class="pill-text">Health</text>
+      <rect x="474" y="378" width="92" height="24" class="pill" rx="12" ry="12"/>
+      <text x="520" y="395" text-anchor="middle" class="pill-text">Validation</text>
     </g>
   </g>
 
