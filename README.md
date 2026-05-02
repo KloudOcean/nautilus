@@ -74,6 +74,20 @@ curl http://localhost:8080/v1/chat/completions \
 
 ### Add to a Spring Boot app
 
+**Gradle (Kotlin DSL — `build.gradle.kts`):**
+
+```kotlin
+implementation("com.kloudocean:nautilus-starter:0.1.0")
+```
+
+**Gradle (Groovy — `build.gradle`):**
+
+```groovy
+implementation 'com.kloudocean:nautilus-starter:0.1.0'
+```
+
+**Maven (`pom.xml`):**
+
 ```xml
 <dependency>
   <groupId>com.kloudocean</groupId>
