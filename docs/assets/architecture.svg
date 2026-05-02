@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 580" width="940" height="580" font-family="Inter, system-ui, sans-serif">
+  <!-- KloudOcean palette -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0A1628"/>
+    </marker>
+    <style>
+      .container { fill:#FFFFFF; stroke:#0A1628; stroke-width:2; rx:10; ry:10; }
+      .module { fill:#F1F5F9; stroke:#0A1628; stroke-width:1.2; rx:6; ry:6; }
+      .accent { fill:#0A1628; }
+      .accent-text { fill:#FFFFFF; font-weight:600; }
+      .label-strong { fill:#0A1628; font-weight:600; font-size:14px; }
+      .label { fill:#0A1628; font-size:12px; }
+      .label-sub { fill:#475569; font-size:11px; }
+      .edge { stroke:#0A1628; stroke-width:1.6; fill:none; }
+      .edge-dashed { stroke:#475569; stroke-width:1.4; stroke-dasharray:5 4; fill:none; }
+      .pill { fill:#06B6D4; }
+      .pill-text { fill:#0A1628; font-size:10px; font-weight:600; }
+    </style>
+  </defs>
+
+  <!-- ===== Apps / Clients (top) ===== -->
+  <g>
+    <rect x="370" y="20" width="200" height="56" class="container"/>
+    <text x="470" y="44" text-anchor="middle" class="label-strong">Apps · SDKs · cURL</text>
+    <text x="470" y="62" text-anchor="middle" class="label-sub">OpenAI-compatible HTTP / SSE</text>
+  </g>
+
+  <!-- Apps -> Nautilus arrow -->
+  <line x1="470" y1="76" x2="470" y2="118" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- ===== Nautilus Gateway (center) ===== -->
+  <g>
+    <rect x="40" y="120" width="600" height="310" class="container"/>
+
+    <!-- Title bar -->
+    <rect x="40" y="120" width="600" height="42" class="accent" rx="10" ry="10"/>
+    <rect x="40" y="142" width="600" height="20" class="accent"/>
+    <text x="58" y="148" class="accent-text" font-size="15">NAUTILUS GATEWAY</text>
+    <text x="582" y="148" text-anchor="end" fill="#94A3B8" font-size="11">Spring Boot 3 · Java 21 · Gradle</text>
+
+    <!-- Row 1: request path -->
+    <g>
+      <rect x="60" y="180" width="120" height="64" class="module"/>
+      <text x="120" y="206" text-anchor="middle" class="label-strong">/v1/chat</text>
+      <text x="120" y="224" text-anchor="middle" class="label-sub">/completions</text>
+      <text x="120" y="238" text-anchor="middle" class="label-sub">REST · SSE</text>
+
+      <rect x="200" y="180" width="120" height="64" class="module"/>
+      <text x="260" y="206" text-anchor="middle" class="label-strong">Routing</text>
+      <text x="260" y="224" text-anchor="middle" class="label-sub">priority · round-robin</text>
+      <text x="260" y="238" text-anchor="middle" class="label-sub">random · cost-aware</text>
+
+      <rect x="340" y="180" width="120" height="64" class="module"/>
+      <text x="400" y="206" text-anchor="middle" class="label-strong">Smart Fallback</text>
+      <text x="400" y="224" text-anchor="middle" class="label-sub">retry on 429 / 5xx</text>
+      <text x="400" y="238" text-anchor="middle" class="label-sub">circuit breaker</text>
+
+      <rect x="480" y="180" width="140" height="64" class="module"/>
+      <text x="550" y="206" text-anchor="middle" class="label-strong">Provider SPI</text>
+      <text x="550" y="224" text-anchor="middle" class="label-sub">LlmProvider impls</text>
+      <text x="550" y="238" text-anchor="middle" class="label-sub">streaming + sync</text>
+
+      <!-- internal flow arrows -->
+      <line x1="180" y1="212" x2="200" y2="212" class="edge" marker-end="url(#arrow)"/>
+      <line x1="320" y1="212" x2="340" y2="212" class="edge" marker-end="url(#arrow)"/>
+      <line x1="460" y1="212" x2="480" y2="212" class="edge" marker-end="url(#arrow)"/>
+    </g>
+
+    <!-- Row 2: cross-cutting concerns -->
+    <g>
+      <rect x="60" y="270" width="135" height="64" class="module"/>
+      <text x="127" y="296" text-anchor="middle" class="label-strong">Semantic Cache</text>
+      <text x="127" y="314" text-anchor="middle" class="label-sub">pgvector · TTL</text>
+      <text x="127" y="328" text-anchor="middle" class="label-sub">Redis hot tier</text>
+
+      <rect x="215" y="270" width="135" height="64" class="module"/>
+      <text x="282" y="296" text-anchor="middle" class="label-strong">Rate Limit</text>
+      <text x="282" y="314" text-anchor="middle" class="label-sub">per-key · per-route</text>
+      <text x="282" y="328" text-anchor="middle" class="label-sub">token-bucket</text>
+
+      <rect x="370" y="270" width="135" height="64" class="module"/>
+      <text x="437" y="296" text-anchor="middle" class="label-strong">Cost Tracking</text>
+      <text x="437" y="314" text-anchor="middle" class="label-sub">tokens · USD</text>
+      <text x="437" y="328" text-anchor="middle" class="label-sub">per team / key</text>
+
+      <rect x="525" y="270" width="95" height="64" class="module"/>
+      <text x="572" y="296" text-anchor="middle" class="label-strong">Observ.</text>
+      <text x="572" y="314" text-anchor="middle" class="label-sub">Micrometer</text>
+      <text x="572" y="328" text-anchor="middle" class="label-sub">OTel · slf4j</text>
+    </g>
+
+    <!-- Row 3: redaction + auth + audit pill row -->
+    <g>
+      <rect x="60" y="360" width="560" height="50" class="module"/>
+      <text x="80" y="384" class="label-strong">Cross-cutting</text>
+      <rect x="170" y="372" width="92" height="22" class="pill" rx="11" ry="11"/>
+      <text x="216" y="388" text-anchor="middle" class="pill-text">Log Redaction</text>
+      <rect x="270" y="372" width="78" height="22" class="pill" rx="11" ry="11"/>
+      <text x="309" y="388" text-anchor="middle" class="pill-text">API Keys</text>
+      <rect x="356" y="372" width="74" height="22" class="pill" rx="11" ry="11"/>
+      <text x="393" y="388" text-anchor="middle" class="pill-text">Audit Log</text>
+      <rect x="438" y="372" width="78" height="22" class="pill" rx="11" ry="11"/>
+      <text x="477" y="388" text-anchor="middle" class="pill-text">Health</text>
+      <rect x="524" y="372" width="86" height="22" class="pill" rx="11" ry="11"/>
+      <text x="567" y="388" text-anchor="middle" class="pill-text">Validation</text>
+    </g>
+  </g>
+
+  <!-- ===== Providers (right) ===== -->
+  <g>
+    <rect x="700" y="120" width="200" height="310" class="container"/>
+    <rect x="700" y="120" width="200" height="42" class="accent" rx="10" ry="10"/>
+    <rect x="700" y="142" width="200" height="20" class="accent"/>
+    <text x="800" y="148" text-anchor="middle" class="accent-text" font-size="15">LLM Providers</text>
+
+    <rect x="720" y="180" width="160" height="46" class="module"/>
+    <text x="800" y="200" text-anchor="middle" class="label-strong">Claude</text>
+    <text x="800" y="216" text-anchor="middle" class="label-sub">Anthropic API</text>
+
+    <rect x="720" y="236" width="160" height="46" class="module"/>
+    <text x="800" y="256" text-anchor="middle" class="label-strong">OpenAI</text>
+    <text x="800" y="272" text-anchor="middle" class="label-sub">GPT family</text>
+
+    <rect x="720" y="292" width="160" height="46" class="module"/>
+    <text x="800" y="312" text-anchor="middle" class="label-strong">Llama</text>
+    <text x="800" y="328" text-anchor="middle" class="label-sub">Ollama · self-hosted</text>
+
+    <rect x="720" y="348" width="160" height="46" class="module"/>
+    <text x="800" y="368" text-anchor="middle" class="label-strong">Mistral</text>
+    <text x="800" y="384" text-anchor="middle" class="label-sub">Mistral API</text>
+  </g>
+
+  <!-- Nautilus -> Providers (smart routing) -->
+  <path d="M 620 212 C 660 212, 670 240, 700 260" class="edge" marker-end="url(#arrow)"/>
+  <text x="650" y="200" class="label-sub" font-style="italic">smart routing</text>
+
+  <!-- ===== Datastores + Observability (bottom) ===== -->
+  <g>
+    <rect x="40" y="460" width="220" height="100" class="container"/>
+    <text x="150" y="486" text-anchor="middle" class="label-strong">PostgreSQL</text>
+    <text x="150" y="504" text-anchor="middle" class="label-sub">+ pgvector</text>
+    <text x="150" y="524" text-anchor="middle" class="label-sub">embeddings · cache · cost ledger</text>
+    <text x="150" y="544" text-anchor="middle" class="label-sub">audit trail</text>
+
+    <rect x="280" y="460" width="160" height="100" class="container"/>
+    <text x="360" y="486" text-anchor="middle" class="label-strong">Redis</text>
+    <text x="360" y="504" text-anchor="middle" class="label-sub">hot cache</text>
+    <text x="360" y="524" text-anchor="middle" class="label-sub">rate-limit</text>
+    <text x="360" y="544" text-anchor="middle" class="label-sub">counters</text>
+
+    <rect x="460" y="460" width="200" height="100" class="container"/>
+    <text x="560" y="486" text-anchor="middle" class="label-strong">Prometheus</text>
+    <text x="560" y="504" text-anchor="middle" class="label-sub">scrape · metrics</text>
+    <text x="560" y="524" text-anchor="middle" class="label-sub">Grafana dashboards</text>
+    <text x="560" y="544" text-anchor="middle" class="label-sub">SLOs · alerts</text>
+
+    <rect x="680" y="460" width="220" height="100" class="container"/>
+    <text x="790" y="486" text-anchor="middle" class="label-strong">OpenTelemetry</text>
+    <text x="790" y="504" text-anchor="middle" class="label-sub">traces · logs · metrics</text>
+    <text x="790" y="524" text-anchor="middle" class="label-sub">collector → backend</text>
+    <text x="790" y="544" text-anchor="middle" class="label-sub">end-to-end correlation</text>
+  </g>
+
+  <!-- Nautilus -> Postgres -->
+  <line x1="150" y1="430" x2="150" y2="460" class="edge-dashed" marker-end="url(#arrow)"/>
+  <!-- Nautilus -> Redis -->
+  <line x1="360" y1="430" x2="360" y2="460" class="edge-dashed" marker-end="url(#arrow)"/>
+  <!-- Nautilus -> Prometheus -->
+  <line x1="560" y1="430" x2="560" y2="460" class="edge-dashed" marker-end="url(#arrow)"/>
+  <!-- Nautilus -> OTel -->
+  <line x1="790" y1="430" x2="790" y2="460" class="edge-dashed" marker-end="url(#arrow)"/>
+</svg>

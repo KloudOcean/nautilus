@@ -116,21 +116,11 @@ Full docs in [docs/](docs/). Start with the [routing strategies guide](docs/guid
 
 ## Architecture
 
-```
-          +------------------+
-  Apps -->|     Nautilus     |--> Claude
-          |  (Spring Boot)   |--> OpenAI
-          |                  |--> Llama (Ollama)
-          |  - Routing       |--> Mistral
-          |  - Cache         |
-          |  - Rate limit    |
-          |  - Observability |
-          +------------------+
-                  |
-                  v
-         PostgreSQL + pgvector
-         Redis (cache, limits)
-```
+<p align="center">
+  <img src="docs/assets/architecture.svg" alt="Nautilus architecture: clients call the gateway, which routes across LLM providers (Claude, OpenAI, Llama, Mistral) with smart fallback, semantic caching (PostgreSQL + pgvector, Redis), rate limiting, cost tracking, and OpenTelemetry-based observability." width="100%" />
+</p>
+
+Edit the diagram in [docs/assets/architecture.excalidraw](docs/assets/architecture.excalidraw) (open in [Excalidraw](https://excalidraw.com) or the VSCode extension) and re-export the SVG when you change it.
 
 ## Roadmap
 
